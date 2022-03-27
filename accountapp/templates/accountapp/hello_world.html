@@ -16,11 +16,13 @@
 
        </form>
 
-       <% if hello_world_output %}
-       <h1>
+       {% if hello_world_output %}
+        <h1>
            {{ hello_world_output.text }}
-       </h1>
-       <% endif %>
+        </h1>
+
+       {% endif %}
+
     </div>
 
 {% endblock %}
