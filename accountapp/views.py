@@ -48,6 +48,7 @@ class AccountDetailView(DetailView):
 
 class AccountUpdateView(UpdateView):
     model = User
+    context_object_name = 'target_user'
     form_class = AccountUpdateForm
     #reverse와 차이는 리버스는 함수와, 레이지는 클래스와 사용
     success_url = reverse_lazy('accountapp:hello_world')
@@ -55,5 +56,6 @@ class AccountUpdateView(UpdateView):
 
 class AccountDeleteView(DeleteView):
     model = User
+    context_object_name = 'target_user'
     success_url = reverse_lazy('accountapp:login')
     template_name = 'accountapp/delete.html'
