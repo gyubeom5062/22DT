@@ -285,6 +285,7 @@ MagicGrid.prototype.listen = function listen () {
   else { this.getReady(); }
 };
 
+
 let magicGrid = new MagicGrid({
   container: '.container',
   animate: true,
@@ -295,13 +296,12 @@ let magicGrid = new MagicGrid({
 
 // img 로드 됐을 때 가져오도록
 // img 태그를 다 찾음
-var masonrys = document.getElemetsByTagName("img");
+var masonrys = document.getElementsByTagName("img");
 
 for (let i = 0; i < masonrys.length; i++) {
     masonrys[i].addEventListener('load', function() {
         magicGrid.positionItems();
     }, false);
 }
-
 
 magicGrid.listen();
