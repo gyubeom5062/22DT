@@ -15,3 +15,10 @@ text-align:center; margin-top: 2rem;
 .pragmatic_header {
 text-align:center; margin-top: 2rem 0;
 }
+
+/*스크린 크기가 500이하면 적용되는 스타일 */
+@media screen and (max-width:500px) {
+    html{
+        font-size: 13px;
+    }
+}
